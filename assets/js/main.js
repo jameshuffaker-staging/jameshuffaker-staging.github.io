@@ -32,10 +32,12 @@
       }
     });
 
-    panel.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
+    // Section links are absolute (e.g. "/#about") so they also work off the home
+    // page; scroll smoothly when the target is on this page, otherwise navigate.
+    panel.querySelectorAll('.nav-links a[href*="#"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
-        var id = link.getAttribute('href');
-        if (id === '#') return;
+        var id = link.hash;
+        if (!id || id === '#') return;
         var target = document.querySelector(id);
         if (target) {
           e.preventDefault();

@@ -38,12 +38,12 @@
 					</button>
 					<nav id="nav-panel" class="nav-panel" aria-label="Page sections">
 						<ul class="nav-links">
-							<li><a href="#welcome">Welcome</a></li>
-							<li><a href="#specialized-care">Specialized Care</a></li>
-							<li><a href="#approach">My Approach</a></li>
-							<li><a href="#about">About Me</a></li>
-							<li><a href="#insurance">Insurance & Getting Started</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="{{ '/' | relative_url }}#welcome">Welcome</a></li>
+							<li><a href="{{ '/' | relative_url }}#specialized-care">Specialized Care</a></li>
+							<li><a href="{{ '/' | relative_url }}#approach">My Approach</a></li>
+							<li><a href="{{ '/' | relative_url }}#about">About Me</a></li>
+							<li><a href="{{ '/' | relative_url }}#insurance">Insurance & Getting Started</a></li>
+							<li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
 							<li><a href="https://henoportal.com/ords/f?p=783:9999:::NO::P1_PORTAL_ID:570U6ZFMEWZA" target="_blank" rel="noopener">Patient Portal Login</a></li>
 						</ul>
 						<ul class="nav-contact">
@@ -60,8 +60,7 @@
 					<section id="footer">
 							<ul class="copyright">
 								<li>&copy; <script>document.write(new Date().getFullYear());</script> Rooted Pelvic Health & Recovery. All rights reserved.</li>
-								<!-- TODO: replace "#" with the real Notice of Privacy Practices link once finalized -->
-								<li><a href="#">Notice of Privacy Practices</a></li>
+								<li><a href="{{ '/notice-of-privacy-practices/' | relative_url }}">Notice of Privacy Practices</a></li>
 								<li>Built with: <a href="https://jekyllrb.com/">Jekyll</a></li>
 							</ul>
 						</div>

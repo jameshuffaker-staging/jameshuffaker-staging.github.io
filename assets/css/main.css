@@ -608,6 +608,146 @@ body.is-preload #banner .logo {
   }
 }
 
+/* Legal / policy pages (e.g. Notice of Privacy Practices) */
+#banner.banner-compact {
+  padding: 4em 0 3.25em 0;
+}
+
+#banner.banner-compact .logo .icon {
+  max-width: 20em;
+}
+
+#banner.banner-compact .logo a {
+  border-bottom: none;
+}
+
+.legal-meta {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-sparse);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0 0 1.5em 0;
+}
+
+.legal-doc h2 {
+  margin-top: 1.75em;
+}
+
+.legal-return {
+  margin-top: 2.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid var(--sage-200);
+}
+
+.npp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25em 0 2em 0;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.npp-table thead th {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  padding: 0 0.9em 0.4em 0;
+  border-bottom: 3px solid var(--color-accent-light);
+}
+
+.npp-table tbody th {
+  width: 32%;
+  font-weight: 700;
+  color: var(--color-dark);
+  vertical-align: top;
+  padding: 0.9em 1.25em 0.9em 0;
+  border-bottom: 1px solid var(--sage-200);
+}
+
+.npp-table tbody td {
+  vertical-align: top;
+  padding: 0.9em 0;
+  border-bottom: 1px solid var(--sage-200);
+}
+
+@media screen and (max-width: 736px) {
+  /* Stack each row: the row header becomes the label above its text. */
+  .npp-table,
+  .npp-table tbody,
+  .npp-table tr,
+  .npp-table tbody th,
+  .npp-table tbody td {
+    display: block;
+    width: auto;
+  }
+
+  .npp-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .npp-table tr {
+    padding: 0.85em 0;
+    border-bottom: 1px solid var(--sage-200);
+  }
+
+  .npp-table tr:first-child {
+    border-top: 3px solid var(--color-accent-light);
+  }
+
+  .npp-table tbody th {
+    padding: 0 0 0.25em 0;
+    border-bottom: none;
+  }
+
+  .npp-table tbody td {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+@media print {
+  #site-nav,
+  #banner,
+  .legal-return {
+    display: none;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  #page-wrapper {
+    padding: 0;
+  }
+
+  #main-content {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .npp-table {
+    page-break-inside: auto;
+  }
+
+  .npp-table tr {
+    page-break-inside: avoid;
+  }
+}
+
 /* Hamburger nav */
 .nav-header {
   position: fixed;
